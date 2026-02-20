@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Avatar System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>AI Avatar Communication System</h1>
+        
+        <div class="video-container">
+            <div class="local-video">
+                <h3>Your Video</h3>
+                <video id="localVideo" autoplay muted playsinline></video>
+            </div>
+            <div class="remote-video">
+                <h3>AI Avatar</h3>
+                <video id="remoteVideo" autoplay playsinline></video>
+            </div>
+        </div>
+        
+        <div class="controls">
+            <button id="startBtn" onclick="startCall()">Start Call</button>
+            <button id="stopBtn" onclick="stopCall()" disabled>Stop Call</button>
+            <button id="recordBtn" onclick="toggleRecording()">Start Recording</button>
+        </div>
+        
+        <div class="status">
+            <p>Status: <span id="statusText">Disconnected</span></p>
+            <p>Recognized Text: <span id="recognizedText"></span></p>
+            <p>LLM Response: <span id="llmResponse"></span></p>
+        </div>
+        
+        <div class="debug">
+            <h3>Debug Info</h3>
+            <pre id="debugInfo"></pre>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
